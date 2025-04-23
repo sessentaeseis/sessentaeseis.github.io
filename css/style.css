@@ -42,7 +42,7 @@ h3.textobannerinicial {
 .botoes_sup {
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 200;
     padding: 20px;
     background-color: #141414;
     width: 100%;
