@@ -249,3 +249,25 @@ a.card-atv img {
     display: block;
     z-index: 25;
 }
+
+footer {
+    margin-top: 100px;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 5px;
+}
+
+footer img {
+    margin: 5px;
+    height: 46px;
+    transition: 0.3s ease;
+    border: 3px;
+    border-radius: 50%;
+}
+
+footer img:hover {
+    box-shadow: #7c37fb 0px 0px 5px 4px;
+    
+}

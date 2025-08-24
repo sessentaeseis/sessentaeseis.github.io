@@ -1,42 +1,34 @@
-// script.js
-// Troca de abas (trimestres) - nomes em português e comentários para facilitar a leitura
+
 
 (function () {
 
-  // Seleciona todos os botões de aba e todos os painéis
   const botoes = Array.from(document.querySelectorAll('.aba'));
   const paineis = Array.from(document.querySelectorAll('.painel'));
 
-  // Garante que cada painel tem id no formato painel-1, painel-2, ...
-  // (caso alguém edite o HTML depois)
   paineis.forEach((painel, indice) => {
     if (!/^painel-\d+$/.test(painel.id)) {
       painel.id = 'painel-' + (indice + 1);
     }
   });
 
-  // Garante que cada botão tem data-aba (data-aba="1", "2", ...)
+  
   botoes.forEach((btn, indice) => {
     if (!btn.dataset.aba) {
       btn.dataset.aba = String(indice + 1);
     }
-    // Também define um id acessível para aria-labelledby se desejado
     if (!btn.id) {
       btn.id = 'aba-' + (indice + 1);
     }
   });
 
-  // Função que ativa a aba número n (string ou número)
   function ativarAba(n) {
     const numero = String(n);
 
-    // Atualiza atributo aria-selected em cada botão
     botoes.forEach(btn => {
       const selecionado = btn.dataset.aba === numero;
       btn.setAttribute('aria-selected', selecionado ? 'true' : 'false');
     });
 
-    // Mostra o painel correspondente e esconde os outros
     paineis.forEach(p => {
       if (p.id === 'painel-' + numero) {
         p.classList.add('ativa');
@@ -46,7 +38,7 @@
     });
   }
 
-  // Clique nos botões para trocar de aba
+  
   botoes.forEach(btn => {
     btn.addEventListener('click', function () {
       const valor = this.dataset.aba;
@@ -54,9 +46,6 @@
     });
   });
 
-  // Suporte por teclado:
-  // - Teclas '1', '2', '3', ... ativam as abas correspondentes
-  // - Seta esquerda/direita ciclam entre as abas
   document.addEventListener('keydown', function (e) {
     const key = e.key;
 
@@ -67,7 +56,6 @@
       return;
     }
 
-    // ciclar com setas
     if (key === 'ArrowLeft' || key === 'ArrowRight') {
       const atual = botoes.findIndex(b => b.getAttribute('aria-selected') === 'true');
       if (atual === -1) return;
@@ -78,8 +66,6 @@
     }
   });
 
-  // Inicialização: se houver um botão marcado aria-selected="true" ele será usado,
-  // caso contrário ativamos a primeira aba por padrão.
   const inicial = botoes.find(b => b.getAttribute('aria-selected') === 'true') || botoes[0];
   if (inicial) inicial.click();
 
