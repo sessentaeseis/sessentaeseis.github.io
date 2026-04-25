@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Share Tech Mono', monospace;
+    line-height: 1.6;
+    min-height: 100vh;
+    letter-spacing: -1px;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 15px 20px;
+    border-bottom: 1px solid #333333;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+nav a {
+    padding: 8px 16px;
+    font-size: 14px;
+    text-transform: lowercase;
+    border: 1px solid transparent;
+    transition: all 0.1s ease;
+}
+
+nav a:hover {
+    border-color: white;
+    background-color: #0a0a0a;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown_button {
+    background: transparent;
+    border: 1px solid #333333;
+    color: white;
+    padding: 8px 16px;
+    font-family: inherit;
+    font-size: 14px;
+    text-transform: lowercase;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    margin: 3px;
+}
+
+.dropdown_button::after {
+    content: " ▾";
+    color: #fff;
+}
+
+.dropdown_button:hover {
+    border-color: white;
+    background-color: #0a0a0a;
+}
+
+.dropdown_cont {
+    display: none;
+    position: absolute;
+    background-color: black;
+    border: 1px solid #333333;
+    min-width: 200px;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.dropdown:hover .dropdown_cont {
+    display: block;
+}
+
+.dropdown_cont a {
+    display: block;
+    padding: 10px 16px;
+    font-size: 11px;
+    text-transform: lowercase;
+    border-left: 2px solid transparent;
+    transition: all 0.1s ease;
+}
+
+.dropdown_cont a:hover {
+    border-left-color: white;
+    background-color: #0a0a0a;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+.sobremim {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 60px;
+    padding: 60px 20px;
+    flex-wrap: wrap;
+}
+
+.sobremim img {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+}
+
+.sobremim_txt {
+    max-width: 550px;
+}
+
+.sobremim_txt h2 {
+    font-size: 18px;
+    text-transform: lowercase;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #333333;
+    position: relative;
+}
+
+.sobremim_txt h2::before {
+    content: "> ";
+    color: #888888;
+}
+
+.sobremim_txt p {
+    font-size: 16px;
+    color: #888888;
+}
+
+.sobremim_txt p::first-line {
+    color: white;
+}
+
+.sobremim a img {
+    width: 35px;
+    height: 35px;
+    margin-left: 0;
+    margin: 20px 10px 0px 0px;
+    transition: all 0.3s ease;
+}
+
+.sobremim a img:hover {
+    transform: scale(1.05);
+}
+
+
+.botoes_landing {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: 60px 0;
+}
+
+.botoes_landing a {
+    padding: 15px 30px;
+    font-size: 14px;
+    text-transform: lowercase;
+    border: 1px solid #333333;
+    margin: 5px;
+    margin-top: 0px;
+    position: relative;
+    transition: all 0.1s ease;
+}
+
+.botoes_landing a::before {
+    content: "[";
+    margin-right: 8px;
+    color: #888888;
+}
+
+.botoes_landing a::after {
+    content: "]";
+    margin-left: 8px;
+    color: #888888;
+}
+
+.botoes_landing a:hover {
+    color: black;
+    border-color: white;
+}
+
+
+
+.certificados {
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid #333333;
+}
+
+.certificados h2 {
+    font-size: 18px;
+    text-transform: lowercase;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.certificados h2::before {
+    content: "// ";
+    color: #888888;
+}
+
+.fotos_container {
+    max-width: 900px;
+    margin: auto;
+    position: relative;
+}
+
+.slides {
+    display: none;
+}
+
+.slides img {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+    border: 1px solid #333333;
+    margin: auto;
+}
+
+.slides p {
+    font-size: 12px;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #333333;
+    border-top: none;
+    color: #888888;
+    background-color: #0a0a0a;
+}
+
+.numtexto {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: #888888;
+    background-color: black;
+    padding: 5px 10px;
+    border: 1px solid #333333;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    background-color: black;
+    border: 1px solid #333333;
+    transition: all 0.1s ease;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.prev:hover, .next:hover {
+    background-color: white;
+    color: black;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #333333;
+    margin-top: 60px;
+    color: #fff;
+}
+
+footer p {
+    font-size: 18px;
+}
+
+footer a {
+    transition: all 0.1s ease;
+    text-decoration: underline;
+    color: #888888;
+}
+
+footer a:hover {
+    color: white;
+}
+
+
+/* responsivo pra tela pequena */
+
+@media (max-width: 768px) {
+    nav {
+        gap: 5px;
+    }
+    
+    nav a, .dropdown_button {
+        padding: 8px 12px;
+        font-size: 10px;
+    }
+    
+    .sobremim {
+        flex-direction: column;
+        gap: 40px;
+        padding: 40px 20px;
+    }
+    
+    .sobremim > img {
+        max-width: 100%;
+    }
+    
+    .sobremim_txt h2 {
+        font-size: 12px;
+    }
+    
+    .sobremim_txt p {
+        font-size: 13px;
+    }
+    
+    .botoes_landing a {
+        padding: 12px 20px;
+        font-size: 10px;
+    }
+    
+    .prev, .next {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+::selection {
+    background-color: white;
+    color: black;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888888;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
