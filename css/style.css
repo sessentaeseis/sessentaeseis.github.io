@@ -208,13 +208,13 @@ main {
 
 
 
-.certificados {
+.certificados, .fotos {
     margin-top: 80px;
     padding-top: 80px;
     border-top: 1px solid #333333;
 }
 
-.certificados h2 {
+.certificados h2, .fotos h2 {
     font-size: 18px;
     text-transform: lowercase;
     letter-spacing: 4px;
@@ -222,22 +222,22 @@ main {
     margin-bottom: 40px;
 }
 
-.certificados h2::before {
+.certificados h2::before, .fotos h2::before {
     content: "// ";
     color: #888888;
 }
 
-.fotos_container {
+.fotos-container, .certificados-container {
     max-width: 900px;
     margin: auto;
     position: relative;
 }
 
-.slides {
+.cert-slides, .foto-slides {
     display: none;
 }
 
-.slides img {
+.cert-slides img, .foto-slides img {
     width: 100%;
     max-width: 100%;
     display: block;
@@ -245,7 +245,7 @@ main {
     margin: auto;
 }
 
-.slides p {
+.cert-slides p, .foto-slides p {
     font-size: 12px;
     text-align: center;
     padding: 20px;
