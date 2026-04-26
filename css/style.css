@@ -122,10 +122,11 @@ main {
     flex-wrap: wrap;
 }
 
-.sobremim img {
+#eu {
     max-width: 400px;
     width: 100%;
     height: auto;
+    border: 1px solid #333333;
 }
 
 .sobremim_txt {
