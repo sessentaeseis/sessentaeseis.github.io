@@ -1,5 +1,3 @@
-
-
 (function () {
 
   const botoes = Array.from(document.querySelectorAll('.aba'));

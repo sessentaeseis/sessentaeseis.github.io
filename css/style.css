@@ -182,7 +182,7 @@ main {
     font-size: 14px;
     text-transform: lowercase;
     border: 1px solid #333333;
-    margin: 5px;
+    margin: 15px;
     margin-top: 0px;
     position: relative;
     transition: all 0.1s ease;
@@ -201,15 +201,15 @@ main {
 }
 
 .botoes_landing a:hover {
-    color: black;
-    border-color: white;
+    color: white;
+    border-color: #888888;
 }
 
 
 
 .certificados {
     margin-top: 80px;
-    padding-top: 40px;
+    padding-top: 80px;
     border-top: 1px solid #333333;
 }
 
@@ -362,7 +362,12 @@ footer a:hover {
 
 ::selection {
     background-color: white;
-    color: black;
+    color: black; 
+}
+
+::-moz-selection {
+    background-color: white;
+    color: black; 
 }
 
 ::-webkit-scrollbar {

@@ -1,0 +1,146 @@
+h1 {
+    font-size: 38px;
+    text-transform: lowercase;
+    letter-spacing: 4px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h3 {
+    text-align: center;
+    margin-top: -30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: lowercase;
+}
+
+h1::before {
+    content: "// ";
+    color: #888888;
+}
+
+.conteudo {
+    margin: 30px auto;
+    padding: 20px;
+}
+
+main {
+    max-width: max-content;
+    width: 80%;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Linha de abas */
+.linha-abas{
+    display:flex;
+    gap:0;
+    flex-wrap: wrap;
+    justify-content:center;
+    margin-bottom: 38px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #333333;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.aba {
+    padding: 15px 30px;
+    font-size: 14px;
+    text-transform: lowercase;
+    border: 1px solid #333333;
+    margin: 15px;
+    margin-top: 0px;
+    position: relative;
+    transition: all 0.1s ease;
+}
+
+.aba::before {
+    content: "[";
+    margin-right: 8px;
+    color: #888888;
+}
+
+.aba::after {
+    content: "]";
+    margin-left: 8px;
+    color: #888888;
+}
+
+.aba:hover {
+    color: white;
+    border-color: #888888;
+}
+
+.aba[aria-selected="true"]{
+    background-color:#101010;
+    color:#eee;
+    transform:translateY(-3px);
+}
+
+/* Painéis */
+.painel{
+    display:none;
+    padding:18px;
+}
+
+.painel.ativa{
+    display:block
+}
+
+
+.card-container {
+    display:inline-flex;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+a.card-atv {
+    background-color: transparent;
+    margin: 5px 5px;
+    padding: 5px;
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: #888888;
+    border: 1px solid #333333;
+    max-width: 500px; 
+}
+
+a.card-atv:hover {
+    transform:translateY(-3px);
+    border-color: white;
+    background-color: #101010;
+}
+
+a.card-atv img {
+    margin: 30px auto;
+    display: block;
+    object-fit: contain;
+    max-width: 85%;
+    border: 1px solid #333333;
+}
+
+.card-txt {
+    text-align: justify;
+    margin: auto;
+    padding: 10px;
+    padding-top: 0px;
+    max-width: 90%;
+    letter-spacing: -1px;
+}
+
+.card-txt h3 {
+    margin-top: 15px;
+    font-size: 24px;
+    letter-spacing: normal;
+    text-transform: none;
+    color: white;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #333333;
+}
+
