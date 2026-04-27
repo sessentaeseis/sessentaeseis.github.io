@@ -31,7 +31,6 @@ main {
     padding: 40px 20px;
 }
 
-/* Linha de abas */
 .linha-abas{
     display:flex;
     gap:0;
@@ -82,7 +81,6 @@ button {
     transform:translateY(-3px);
 }
 
-/* Painéis */
 .painel{
     display:none;
     padding:18px;
@@ -155,4 +153,32 @@ a.card-atv img {
 
 .habilidades::first-line {
     color: white;
+}
+
+/* responsivo pra tela pequena */
+@media (max-width: 768px) {
+    main {
+        width: 98%;
+        padding: 10px 2px;
+    }
+    .linha-abas {
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 10px;
+    }
+    .aba {
+        padding: 10px 10px;
+        font-size: 11px;
+        margin: 5px;
+    }
+    .card-container {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .card-txt h3 {
+        font-size: 16px;
+    }
+    .card-txt {
+        font-size: 12px;
+    }
 }
