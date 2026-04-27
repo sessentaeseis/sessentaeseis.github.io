@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento de Sistemas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/materia.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Página Inicial</a>
+        <a href="humanas.html">Humanas</a>
+        <a href="linguagens.html">Linguagens</a>
+        <a href="matematica.html">Matemática</a>
+        <a href="natureza.html">Natureza</a>
+        <div class="dropdown">
+            <button class="dropdown_button"><b>Técnico</b></button>
+                <div class="dropdown_cont">
+                    <a href="bancodedados.html">Banco de Dados</a>
+                    <a href="modelagem.html">Modelagem de Sistemas</a>
+                    <a href="iot.html">Internet das Coisas</a>
+                    <a href="devsistemas.html"><b>Desenvolvimento de Sistemas</b></a>
+                </div>
+        </div>
+    </nav>
+    <main>
+        <h1>Desenvolvimento de Sistemas</h1>
+        <h3>Terceiro Ano - Ensino Médio</h3>
+        <div class="conteudo">
+            <div class="linha-abas" role="tablist" aria-label="Trimestres">
+                <button class="aba" data-aba="1" aria-selected="true" role="tab">primeiro Trimestre</button>
+                <button class="aba" data-aba="2" aria-selected="false" role="tab">segundo Trimestre</button>
+                <button class="aba" data-aba="3" aria-selected="false" role="tab">terceiro Trimestre</button>
+            </div>
+
+            <section id="painel-1" class="painel ativa" role="tabpanel" aria-labelledby="aba-1">
+                <div class="card-container">
+                    <a target="_blank" href="#" class="card-atv">
+                        <img src="https://animesher.com/orig/1/189/1898/18986/animesher.com_atlus-videoganes-futaba-sakura-1898672.gif" alt="">
+                        <p>ainda não tem nada aqui.....</p>
+                    </a>
+                </div>
+            </section>
+
+            <section id="painel-2" class="painel" role="tabpanel" aria-labelledby="aba-2">
+            </section>
+
+            <section id="painel-3" class="painel" role="tabpanel" aria-labelledby="aba-3">
+                <div class="card-container">
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>Desenvolvido por Antonio Vedana, 2026.</p>
+        <a href="https://github.com/sessentaeseis/sessentaeseis.github.io" target="_blank">Repositório do Portfólio</a>
+    </footer>
+    <script src="js/materia.js" defer></script>
+</body>
+</html>
