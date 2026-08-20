@@ -56,6 +56,7 @@ button {
     margin-top: 0px;
     position: relative;
     transition: all 0.1s ease;
+    color:#888888;
 }
 
 .aba::before {
