@@ -44,6 +44,35 @@
     });
   });
 
+  document.querySelectorAll('.atividade-fotos').forEach(carrossel => {
+    const fotos = Array.from(carrossel.querySelectorAll('.atividade-foto'));
+    let atual = 0;
+
+    function mostrarFoto(indice) {
+      atual = (indice + fotos.length) % fotos.length;
+      fotos.forEach((foto, fotoIndice) => {
+        foto.classList.toggle('ativa', fotoIndice === atual);
+      });
+    }
+
+    function trocarFoto(direcao, evento) {
+      evento.preventDefault();
+      evento.stopPropagation();
+      mostrarFoto(atual + direcao);
+    }
+
+    carrossel.querySelector('.foto-anterior').addEventListener('click', evento => trocarFoto(-1, evento));
+    carrossel.querySelector('.foto-proxima').addEventListener('click', evento => trocarFoto(1, evento));
+    carrossel.querySelectorAll('[role="button"]').forEach(controle => {
+      controle.addEventListener('keydown', evento => {
+        if (evento.key === 'Enter' || evento.key === ' ') {
+          evento.preventDefault();
+          controle.click();
+        }
+      });
+    });
+  });
+
   document.addEventListener('keydown', function (e) {
     const key = e.key;
 

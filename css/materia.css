@@ -124,6 +124,71 @@ a.card-atv img {
     border: 1px solid #333333;
 }
 
+a.card-atv video {
+    margin: 30px auto;
+    display: block;
+    object-fit: contain;
+    max-width: 85%;
+    border: 1px solid #333333;
+}
+.atividade-fotos {
+    position: relative;
+}
+
+.atividade-foto {
+    display: none;
+    position: relative;
+}
+
+.atividade-foto.ativa {
+    display: block;
+}
+
+.atividade-foto span {
+    position: absolute;
+    left: 8px;
+    bottom: 8px;
+    padding: 3px 7px;
+    color: #fff;
+    background: #000;
+    border: 1px solid #333;
+    font-size: 11px;
+}
+
+.foto-anterior,
+.foto-proxima {
+    position: absolute;
+    top: 50%;
+    z-index: 1;
+    width: 32px;
+    height: 42px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background: #000;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+.foto-anterior {
+    left: 8px;
+}
+
+.foto-proxima {
+    right: 8px;
+}
+
+.foto-anterior:hover,
+.foto-proxima:hover,
+.foto-anterior:focus-visible,
+.foto-proxima:focus-visible {
+    color: #000;
+    background: #fff;
+    outline: none;
+}
+
 .card-txt {
     text-align: justify;
     margin: auto;
